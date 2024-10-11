@@ -1,0 +1,172 @@
+{
+  "type": "video",
+  "width": 1280,
+  "height": 720,
+  "duration": 10,
+  "fps": 30,
+  "vars": {
+    "bgColor": "#8e998a",
+    "imageUrl": "docs/retirement",
+    "sponsoredText": "Elder Care & Nursing Home",
+    "titleText": "The more we care, the  more beautiful life becomes.",
+    "ctaText": "Read more"
+  },
+  "tracks": [
+    {
+      "clips": [
+        {
+          "color": "{{bgColor}}",
+          "type": "color"
+        }
+      ]
+    },
+    {
+      "width": 920,
+      "height": 720,
+      "x": 0,
+      "y": 0,
+      "clipDefaults": {
+        "clipDuration": 4000,
+        "clipEffect": {
+          "name": "KenBurns",
+          "easing": "linear",
+          "zoom": 1.2,
+          "center": [
+            0.5,
+            0.5
+          ],
+          "direction": "alternate"
+        }
+      },
+      "clips": [
+        {
+          "media": [
+            "{{imageUrl}}",
+            "image",
+            "upload"
+          ],
+          "type": "image",
+          "transformation": "c_fill"
+        },
+        {
+          "media": [
+            "{{imageUrl}}",
+            "image",
+            "upload"
+          ],
+          "type": "image",
+          "transformation": "c_fill"
+        }
+      ]
+    },
+    {
+      "keyframes": {
+        "0": {
+          "y": 430,
+          "opacity": 0
+        },
+        "2000": {
+          "y": 430,
+          "opacity": 0
+        },
+        "3000": {
+          "y": 470,
+          "opacity": 1
+        }
+      },
+      "x": 950,
+      "width": 300,
+      "height": 30,
+      "radius": "15%",
+      "clips": [
+        {
+          "border": 3,
+          "borderColor": "white",
+          "type": "color"
+        }
+      ]
+    },
+    {
+      "keyframes": {
+        "0": {
+          "y": 435,
+          "opacity": 0
+        },
+        "2000": {
+          "y": 435,
+          "opacity": 0
+        },
+        "3000": {
+          "y": 475,
+          "opacity": 1
+        }
+      },
+      "x": 950,
+      "width": 300,
+      "clipDefaults": {
+        "fontSize": 20,
+        "fontColor": "white",
+        "textMaxWidth": 300,
+        "textAlign": "center"
+      },
+      "clips": [
+        {
+          "text": "{{ctaText}}",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "x": 950,
+      "keyframes": {
+        "0": {
+          "y": 290,
+          "opacity": 0
+        },
+        "1000": {
+          "y": 290,
+          "opacity": 0
+        },
+        "2000": {
+          "y": 280,
+          "opacity": 1
+        }
+      },
+      "clipDefaults": {
+        "fontSize": 14,
+        "fontColor": "white"
+      },
+      "clips": [
+        {
+          "text": "{{sponsoredText}}",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "x": 950,
+      "width": 300,
+      "height": 300,
+      "keyframes": {
+        "0": {
+          "y": 290
+        },
+        "1000": {
+          "y": 300
+        }
+      },
+      "clipDefaults": {
+        "textAlign": "left",
+        "fontSize": 32,
+        "fontType": "Merriweather",
+        "fontColor": "white"
+      },
+      "clips": [
+        {
+          "text": "{{titleText}}",
+          "type": "textArea"
+        }
+      ]
+    }
+  ]
+}

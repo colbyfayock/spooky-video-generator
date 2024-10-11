@@ -1,0 +1,395 @@
+{
+  "type": "video",
+  "width": 1280,
+  "height": 720,
+  "duration": 20,
+  "fps": 30,
+  "vars": {
+    "bgClr": "black",
+    "scn1vid1": "videogen/nature/highway-in-the-middle-of-a-mountain",
+    "scn1vid2": "videogen/nature/people-pouring-a-warm-drink-around-a-campfire",
+    "scn2vid1": "videogen/nature/blue-sky-as-the-clouds-travel-blown-by-the-wind",
+    "scn2vid2": "videogen/nature/waterfall-in-forest",
+    "scn3vid1": "videogen/nature/man-walking-through-forest",
+    "scn3vid2": "videogen/nature/dog-catches-a-ball-in-a-river",
+    "scn4vid1": "videogen/nature/palm-tree-on-a-sunny-day",
+    "scn4vid2": "videogen/nature/macaw-parrot-feeding-on-a-branch",
+    "scn4vid3": "videogen/nature/red-sunset-at-sea",
+    "scn4vid4": "videogen/nature/white-flowers-openning",
+    "txt1": "Travel",
+    "txt2": "Nature",
+    "txt3": "Freedom",
+    "txtClr": "wheat",
+    "txtStyle": "Love Ya Like A Sister",
+    "outroTitle": "Thank you for watching!",
+    "outroLink": "https://www.cloudinary.com"
+  },
+  "tracks": [
+    {
+      "clips": [
+        {
+          "type": "color",
+          "color": "{{bgClr}}"
+        }
+      ]
+    },
+    {
+      "keyframes": {
+        "0": {
+          "y": 0
+        },
+        "3000": {
+          "y": 0
+        },
+        "4000": {
+          "y": 720
+        }
+      },
+      "width": 640,
+      "height": 720,
+      "clips": [
+        {
+          "media": [
+            "{{scn1vid1}}",
+            "video"
+          ],
+          "type": "video",
+          "transformation": "c_fill"
+        }
+      ]
+    },
+    {
+      "keyframes": {
+        "0": {
+          "y": 0
+        },
+        "3000": {
+          "y": 0
+        },
+        "4000": {
+          "y": -720
+        }
+      },
+      "x": 640,
+      "width": 640,
+      "height": 720,
+      "clips": [
+        {
+          "media": [
+            "{{scn1vid2}}",
+            "video"
+          ],
+          "type": "video",
+          "transformation": "c_fill"
+        }
+      ]
+    },
+    {
+      "startOffset": 4000,
+      "keyframes": {
+        "0": {
+          "x": 1280
+        },
+        "1000": {
+          "x": 0
+        },
+        "3000": {
+          "x": 0
+        },
+        "4000": {
+          "x": 1280
+        }
+      },
+      "width": 1280,
+      "height": 360,
+      "clips": [
+        {
+          "media": [
+            "{{scn2vid1}}",
+            "video"
+          ],
+          "type": "video",
+          "transformation": "c_fill"
+        }
+      ]
+    },
+    {
+      "startOffset": 4000,
+      "keyframes": {
+        "0": {
+          "x": -1280
+        },
+        "1000": {
+          "x": 0
+        },
+        "3000": {
+          "x": 0
+        },
+        "4000": {
+          "x": -1280
+        }
+      },
+      "y": 360,
+      "width": 1280,
+      "height": 360,
+      "clips": [
+        {
+          "media": [
+            "{{scn2vid2}}",
+            "video"
+          ],
+          "type": "video",
+          "transformation": "c_fill"
+        }
+      ]
+    },
+    {
+      "startOffset": 8000,
+      "keyframes": {
+        "0": {
+          "y": 720
+        },
+        "1000": {
+          "y": 50
+        },
+        "3000": {
+          "y": 50
+        },
+        "4000": {
+          "y": 720
+        }
+      },
+      "width": 540,
+      "height": 620,
+      "x": 50,
+      "clips": [
+        {
+          "media": [
+            "{{scn3vid1}}",
+            "video"
+          ],
+          "type": "video",
+          "transformation": "c_fill"
+        }
+      ]
+    },
+    {
+      "startOffset": 8000,
+      "keyframes": {
+        "0": {
+          "x": 1280
+        },
+        "1000": {
+          "x": 310
+        },
+        "3000": {
+          "x": 310
+        },
+        "4000": {
+          "x": 1280
+        }
+      },
+      "y": 180,
+      "width": 920,
+      "height": 360,
+      "clips": [
+        {
+          "media": [
+            "{{scn3vid2}}",
+            "video"
+          ],
+          "type": "video",
+          "transformation": "c_fill"
+        }
+      ]
+    },
+    {
+      "startOffset": 12000,
+      "keyframes": {
+        "0": {
+          "y": 720
+        },
+        "1000": {
+          "y": 0
+        }
+      },
+      "width": 320,
+      "height": 720,
+      "clips": [
+        {
+          "media": [
+            "{{scn4vid1}}",
+            "video"
+          ],
+          "type": "video",
+          "transformation": "c_fill"
+        }
+      ]
+    },
+    {
+      "startOffset": 12000,
+      "keyframes": {
+        "0": {
+          "y": 720
+        },
+        "200": {
+          "y": 720
+        },
+        "1200": {
+          "y": 0
+        }
+      },
+      "x": 320,
+      "width": 320,
+      "height": 720,
+      "clips": [
+        {
+          "media": [
+            "{{scn4vid2}}",
+            "video"
+          ],
+          "type": "video",
+          "transformation": "c_fill"
+        }
+      ]
+    },
+    {
+      "startOffset": 12000,
+      "keyframes": {
+        "0": {
+          "y": 720
+        },
+        "400": {
+          "y": 720
+        },
+        "1400": {
+          "y": 0
+        }
+      },
+      "x": 640,
+      "width": 320,
+      "height": 720,
+      "clips": [
+        {
+          "media": [
+            "{{scn4vid3}}",
+            "video"
+          ],
+          "type": "video",
+          "transformation": "c_fill"
+        }
+      ]
+    },
+    {
+      "startOffset": 12000,
+      "keyframes": {
+        "0": {
+          "y": 720
+        },
+        "600": {
+          "y": 720
+        },
+        "1600": {
+          "y": 0
+        }
+      },
+      "x": 960,
+      "width": 320,
+      "height": 720,
+      "clips": [
+        {
+          "media": [
+            "{{scn4vid4}}",
+            "video"
+          ],
+          "type": "video",
+          "transformation": "c_fill"
+        }
+      ]
+    },
+    {
+      "clipDefaults": {
+        "textAlign": "left",
+        "textVerticalAlign": "bottom",
+        "fontSize": 144,
+        "fontColor": "{{txtClr}}",
+        "fontType": "{{txtStyle}}",
+        "transitionDuration": 1000,
+        "transition": "crosswarp"
+      },
+      "clips": [
+        {
+          "type": "color",
+          "color": "transparent",
+          "clipDuration": 0
+        },
+        {
+          "type": "textArea",
+          "text": "{{txt1}}",
+          "clipDuration": 3000
+        },
+        {
+          "type": "textArea",
+          "text": "{{txt2}}",
+          "clipDuration": 3000
+        },
+        {
+          "type": "textArea",
+          "text": "{{txt3}}",
+          "clipDuration": 3000
+        },
+        {
+          "type": "color",
+          "color": "transparent",
+          "clipDuration": 0
+        }
+      ]
+    },
+    {
+      "startOffset": 15000,
+      "y": 300,
+      "x": 180,
+      "width": 920,
+      "height": 160,
+      "clips": [
+        {
+          "type": "color",
+          "color": "rgba(0, 0, 0, 0.2)"
+        }
+      ]
+    },
+    {
+      "startOffset": 15000,
+      "clipDefaults": {
+        "textAlign": "center",
+        "textVerticalAlign": "middle",
+        "fontSize": 72,
+        "fontColor": "white",
+        "fontType": "Roboto"
+      },
+      "clips": [
+        {
+          "type": "textArea",
+          "text": "{{outroTitle}}"
+        }
+      ]
+    },
+    {
+      "startOffset": 15000,
+      "y": 70,
+      "clipDefaults": {
+        "textAlign": "center",
+        "textVerticalAlign": "middle",
+        "fontSize": 32,
+        "fontColor": "white",
+        "fontType": "Roboto"
+      },
+      "clips": [
+        {
+          "type": "textArea",
+          "text": "{{outroLink}}"
+        }
+      ]
+    }
+  ]
+}

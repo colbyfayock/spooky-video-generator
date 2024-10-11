@@ -1,0 +1,214 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["type", "width", "height"],
+  "properties": {
+    "type": {
+      "type": "string",
+      "const": "video",
+      "description": "The type of the manifest"
+    },
+    "width": {
+      "type": "integer",
+      "description": "The width of the video in pixels"
+    },
+    "height": {
+      "type": "integer",
+      "description": "The height of the video in pixels"
+    },
+    "duration": {
+      "type": "number",
+      "default": 10,
+      "description": "The duration of the video in seconds"
+    },
+    "fps": {
+      "type": "integer",
+      "description": "The frames per second of the video"
+    },
+    "frame_rate": {
+      "type": "integer",
+      "description": "Alternative name for fps"
+    },
+    "vars": {
+      "type": "object",
+      "description": "Template variables that can be used throughout the manifest",
+      "additionalProperties": {
+        "oneOf": [
+          { "type": "string" },
+          { "type": "number" },
+          { "type": "boolean" }
+        ]
+      }
+    },
+    "tracks": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/track"
+      }
+    }
+  },
+  "definitions": {
+    "effect": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "const": "KenBurns"
+        },
+        "easing": {
+          "type": "string",
+          "enum": ["linear", "ease", "easein", "easeout", "easeinout"]
+        },
+        "zoom": {
+          "type": "number"
+        },
+        "center": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "direction": {
+          "type": "string",
+          "enum": ["forward", "backward", "alternate"]
+        }
+      },
+      "required": ["name"]
+    },
+    "track": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number",
+          "description": "The horizontal position of the track in pixels"
+        },
+        "y": {
+          "type": "number",
+          "description": "The vertical position of the track in pixels"
+        },
+        "width": {
+          "type": "number",
+          "description": "The width of the track in pixels"
+        },
+        "height": {
+          "type": "number",
+          "description": "The height of the track in pixels"
+        },
+        "radius": {
+          "type": "string",
+          "pattern": "^\\d+%$",
+          "description": "How much to round the corners of the track"
+        },
+        "keyframes": {
+          "type": "object",
+          "patternProperties": {
+            "^\\d+$": {
+              "type": "object",
+              "properties": {
+                "x": { "type": "number" },
+                "y": { "type": "number" },
+                "opacity": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                }
+              }
+            }
+          }
+        },
+        "startOffset": {
+          "type": "integer",
+          "description": "The start time offset for the track in milliseconds"
+        },
+        "clipDefaults": {
+          "type": "object",
+          "properties": {
+            "clipDuration": { "type": "number" },
+            "clipEffect": { "$ref": "#/definitions/effect" },
+            "fontSize": { "type": "integer" },
+            "fontColor": { "type": "string" },
+            "textMaxWidth": { "type": "integer" },
+            "textAlign": { "type": "string" },
+            "textVerticalAlign": { "type": "string" },
+            "fontType": { "type": "string" },
+            "transitionDuration": { "type": "integer" },
+            "transition": { "type": "string" }
+          }
+        },
+        "clips": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              { "$ref": "#/definitions/imageVideoClip" },
+              { "$ref": "#/definitions/colorClip" },
+              { "$ref": "#/definitions/textClip" },
+              { "$ref": "#/definitions/textAreaClip" }
+            ]
+          }
+        }
+      }
+    },
+    "imageVideoClip": {
+      "type": "object",
+      "required": ["type", "media"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["image", "video"]
+        },
+        "media": {
+          "type": "string",
+          "description": "The media identifiers, such as public IDs or URLs."
+        },
+        "transformation": {
+          "type": "string",
+          "description": "A Cloudinary transformation in URL syntax."
+        },
+        "clipDuration": {
+          "type": "number",
+          "description": "The duration of the clip in milliseconds"
+        },
+        "transitionDuration": {
+          "type": "number",
+          "description": "The duration of the transition between clips in milliseconds."
+        },
+        "clipEffect": {
+          "$ref": "#/definitions/effect"
+        }
+      }
+    },
+    "colorClip": {
+      "type": "object",
+      "required": ["type"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "color"
+        },
+        "color": { "type": "string" },
+        "border": { "type": "integer" },
+        "borderColor": { "type": "string" }
+      }
+    },
+    "textClip": {
+      "type": "object",
+      "required": ["type", "text"],
+      "properties": {
+        "type": { "type": "string", "const": "text" },
+        "text": { "type": "string" }
+      }
+    },
+    "textAreaClip": {
+      "type": "object",
+      "required": ["type", "text"],
+      "properties": {
+        "type": { "type": "string", "const": "textArea" },
+        "text": { "type": "string" }
+      }
+    }
+  }
+}

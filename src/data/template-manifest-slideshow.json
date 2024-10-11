@@ -1,0 +1,103 @@
+{
+  "type": "video",
+  "width": 720,
+  "height": 576,
+  "duration": 20,
+  "fps": 30,
+  "tracks": [
+    {
+      "width": 720,
+      "height": 576,
+      "x": 0,
+      "y": 0,
+      "clipDefaults": {
+        "clipDuration": 4000,
+        "transitionDuration": 1000,
+        "transition": "linearblur"
+      },
+      "clips": [
+        {
+          "media": [
+            "docs/shoppable_sunglasses",
+            "image",
+            "upload"
+          ],
+          "type": "image",
+          "transformation": "c_auto"
+        },
+        {
+          "media": [
+            "docs/shoppable_dress",
+            "image",
+            "upload"
+          ],
+          "type": "image",
+          "transformation": "c_auto"
+        },
+        {
+          "media": [
+            "docs/shoppable_bag2",
+            "image",
+            "upload"
+          ],
+          "type": "image",
+          "transformation": "c_auto"
+        },
+        {
+          "media": [
+            "docs/shoppable_bag",
+            "image",
+            "upload"
+          ],
+          "type": "image",
+          "transformation": "c_auto"
+        },
+        {
+          "media": [
+            "docs/shoppable_bag",
+            "image",
+            "upload"
+          ],
+          "type": "image",
+          "transformation": "c_auto"
+        }
+      ]
+    },
+    {
+      "y": -50,
+      "clipDefaults": {
+        "textAlign": "center",
+        "textVerticalAlign": "bottom",
+        "fontSize": 48,
+        "fontColor": "white",
+        "fontType": "Creepster",
+        "transitionDuration": 1000,
+        "transition": "fade",
+        "clipDuration": 4000,
+        "textMaxWidth": 620
+      },
+      "clips": [
+        {
+          "type": "textArea",
+          "text": "all your"
+        },
+        {
+          "type": "textArea",
+          "text": "base are"
+        },
+        {
+          "type": "textArea",
+          "text": "belong to"
+        },
+        {
+          "type": "textArea",
+          "text": "us"
+        },
+        {
+          "type": "textArea",
+          "text": "!!!"
+        }
+      ]
+    }
+  ]
+}
