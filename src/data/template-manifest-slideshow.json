@@ -1,13 +1,13 @@
 {
   "type": "video",
-  "width": 720,
-  "height": 576,
+  "width": 640,
+  "height": 360,
   "duration": 20,
   "fps": 30,
   "tracks": [
     {
-      "width": 720,
-      "height": 576,
+      "width": 640,
+      "height": 360,
       "x": 0,
       "y": 0,
       "clipDefaults": {
@@ -64,17 +64,17 @@
       ]
     },
     {
-      "y": -50,
+      "y": -25,
       "clipDefaults": {
         "textAlign": "center",
         "textVerticalAlign": "bottom",
-        "fontSize": 48,
+        "fontSize": 30,
         "fontColor": "white",
         "fontType": "Creepster",
         "transitionDuration": 1000,
         "transition": "fade",
         "clipDuration": 4000,
-        "textMaxWidth": 620
+        "textMaxWidth": 590
       },
       "clips": [
         {

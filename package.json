@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@cloudinary-util/util": "^3.3.2",
+    "@nanostores/react": "github:ai/react",
     "cloudinary": "^2.5.1",
     "clsx": "^2.1.1",
     "jszip": "^3.10.1",
@@ -19,8 +20,7 @@
     "openai": "^4.67.3",
     "react": "^18",
     "react-dom": "^18",
-    "tailwind-merge": "^2.5.3",
-    "zod": "^3.23.8"
+    "tailwind-merge": "^2.5.3"
   },
   "devDependencies": {
     "@types/node": "^20",
