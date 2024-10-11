@@ -10,7 +10,7 @@ import templateManifestSlideshow from '@/data/template-manifest-slideshow.json';
 
 export default function Home() {
   const [state, setState] = useState('ready');
-  const [story, setStory] = useState<Array<any>>();
+  const [story, setStory] = useState<Array<{ image: { public_id: string; }; content: string }>>();
   const [videoId, setVideoId] = useState<string>();
 
   async function handleOnClick() {
@@ -165,7 +165,7 @@ export default function Home() {
             💀
           </span>
           <p className="relative z-10 text-2xl text-center animate-pulse mb-6">
-            It's not too late to turn back... 🫣
+            It&apos;s not too late to turn back... 🫣
           </p>
         </>
       )}

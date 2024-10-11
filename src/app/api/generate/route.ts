@@ -22,7 +22,7 @@ export async function POST(request: Request) {
     const results = await new Promise((resolve, reject) => {
       cloudinary.uploader.upload_stream({
         resource_type: 'auto'
-      }, (error: any, result: any) => {
+      }, (error: unknown, result: unknown) => {
         if (result) {
           resolve(result);
         } else {

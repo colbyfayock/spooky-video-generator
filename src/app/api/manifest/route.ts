@@ -104,7 +104,7 @@ ${JSON.stringify(manifestSchema)}
       manifest
     })
   } catch(e) {
-    
+    console.log(e);
     return new Response(JSON.stringify({
       error: 'Could not parse manifest.'
     }), {
